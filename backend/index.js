@@ -17,6 +17,9 @@ app.get('/',(req,res)=>{
   app.use(express.static(path.resolve(__dirname, 'frontend','dist')))
   res.sendFile(path.resolve(__dirname, 'frontend',"dist",'index.html'))
 })
-app.listen(3000,()=>{
+
+const port = 10000 
+
+app.listen(port || 3000,()=>{
     console.log('listening on port 3000')
 })
